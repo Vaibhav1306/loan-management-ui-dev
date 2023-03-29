@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="icon-button with menu icon"
+    (click)="toggleNav()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Loan Portal</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button aria-label="person-icon">
+    <mat-icon>person</mat-icon>
+    &nbsp;
+  </button>
+  <span>Vaibhav SD</span>
+  <a [matMenuTriggerFor]="menu"><mat-icon>arrow_drop_down</mat-icon></a>
+  <mat-menu #menu="matMenu">
+    <button routerLink="settings" mat-menu-item>Settings</button>
+    <button routerLink="activity" mat-menu-item>Activity log</button>
+    <hr />
+    <button mat-menu-item routerLink="logout">Log out</button>
+  </mat-menu>
+</mat-toolbar>

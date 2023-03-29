@@ -1,0 +1,35 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav class="example-sidenav" #sidenav mode="side" opened>
+    <mat-list>
+      <mat-list-item routerLink="dashboard" class="list-item"
+        ><mat-icon>home</mat-icon>Dashboard</mat-list-item
+      >
+      <mat-list-item routerLink="loans" class="list-item"
+        ><mat-icon>device_hub</mat-icon>Loans</mat-list-item
+      >
+      <mat-list-item routerLink="customers" class="list-item"
+        ><mat-icon>supervised_user_circle</mat-icon>Customers</mat-list-item
+      >
+      <mat-list-item routerLink="payments" class="list-item"
+        ><mat-icon>wallet</mat-icon>Payments</mat-list-item
+      >
+      <mat-list-item routerLink="invoices" class="list-item"
+        ><mat-icon>receipt</mat-icon>Invoices</mat-list-item
+      >
+      <mat-list-item routerLink="loan-plans" class="list-item"
+        ><mat-icon>list_alt</mat-icon>Loan Plans</mat-list-item
+      >
+      <mat-list-item routerLink="reports" class="list-item"
+        ><mat-icon>show_chart</mat-icon>Reports</mat-list-item
+      >
+      <mat-list-item routerLink="settings" class="list-item"
+        ><mat-icon>settings</mat-icon>Settings</mat-list-item
+      >
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

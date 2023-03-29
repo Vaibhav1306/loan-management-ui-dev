@@ -1,0 +1,14 @@
+.footer {
+  position: fixed;
+  top: 92%;
+  width: 100%;
+  height: max-content;
+  background-color: rgb(53 113 109);
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+  .brand-text {
+    line-height: 2;
+    font-size: xx-large;
+  }
+}
