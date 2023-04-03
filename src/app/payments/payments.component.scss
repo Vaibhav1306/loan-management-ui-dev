@@ -1,0 +1,49 @@
+.parent-container {
+  width: 100%;
+  height: 100%;
+  .inner-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px 0 60px;
+
+    .add-new-button {
+      width: 177px;
+      line-height: 1;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .inner-container-body {
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: inset;
+  }
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+::ng-deep .mat-mdc-table {
+  max-height: 320px;
+  overflow: auto;
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  margin: 15px 0 0 15px;
+  border-radius: 15px !important;
+}
+
+::ng-deep .mdc-line-ripple::before {
+  border-bottom-width: 0px !important;
+}
+
+.table-rows:hover {
+  background: rgb(192, 190, 190) !important;
+}

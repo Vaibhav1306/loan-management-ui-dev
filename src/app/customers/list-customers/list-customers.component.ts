@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -75,7 +75,7 @@ const tableData = [
   templateUrl: './list-customers.component.html',
   styleUrls: ['./list-customers.component.scss'],
 })
-export class ListCustomersComponent {
+export class ListCustomersComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'CustomerId',
     'FirstName',
@@ -108,19 +108,3 @@ export class ListCustomersComponent {
     }
   }
 }
-
-/** Builds and returns a new User. */
-// function createNewUser(id: number): UserData {
-//   const name =
-//     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-//     ' ' +
-//     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-//     '.';
-
-//   return {
-//     id: id.toString(),
-//     name: name,
-//     progress: Math.round(Math.random() * 100).toString(),
-//     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-//   };
-// }
