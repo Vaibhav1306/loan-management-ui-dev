@@ -4,43 +4,70 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  fruit: string;
+  CustomerId: number;
+  FirstName: string;
+  LastName: string;
+  PhoneNumber: string;
+  EmailAddress: string;
+  Address: string;
+  Department: string;
 }
 
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
-];
-const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
+const tableData = [
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
+  {
+    CustomerId: 4564656,
+    FirstName: 'Vaibhav',
+    LastName: 'Shrivastava',
+    PhoneNumber: 'xxte562342',
+    EmailAddress: 'dtcdfeg@hgxh.com',
+    Address: 'New York',
+    Department: 'Some Depart...',
+  },
 ];
 
 @Component({
@@ -49,18 +76,22 @@ const NAMES: string[] = [
   styleUrls: ['./list-customers.component.scss'],
 })
 export class ListCustomersComponent {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = [
+    'CustomerId',
+    'FirstName',
+    'LastName',
+    'PhoneNumber',
+    'EmailAddress',
+    'Address',
+    'Department',
+  ];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   constructor() {
-    // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+    this.dataSource = new MatTableDataSource(tableData);
   }
 
   ngAfterViewInit() {
@@ -79,17 +110,17 @@ export class ListCustomersComponent {
 }
 
 /** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
+// function createNewUser(id: number): UserData {
+//   const name =
+//     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
+//     ' ' +
+//     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
+//     '.';
 
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-  };
-}
+//   return {
+//     id: id.toString(),
+//     name: name,
+//     progress: Math.round(Math.random() * 100).toString(),
+//     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
+//   };
+// }
