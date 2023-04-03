@@ -1,1 +1,10 @@
-<p>loan-plans works!</p>
+<div class="parent-container">
+  <div style="margin: 40px 0 40px 0; font-size: 24px; font-family: sans-serif">
+    Loan Types
+  </div>
+  <div class="type-list">
+    <mat-list>
+      <mat-list-item *ngFor="let val of loanTypes">{{ val }}</mat-list-item>
+    </mat-list>
+  </div>
+</div>
