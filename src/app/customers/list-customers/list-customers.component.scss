@@ -43,3 +43,7 @@
 ::ng-deep .mdc-line-ripple::before {
   border-bottom-width: 0px !important;
 }
+
+.table-rows:hover {
+  background: rgb(192, 190, 190) !important;
+}
